@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maison Sanzo'o</title>
+  <style>
+    /* Bouton flottant WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
+  filter: invert(100%);
+}
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #4CAF50;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .product-card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      padding: 20px;
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .contact-info {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Maison Sanzo'o</h1>
+    <p>Cosmétiques & Produits alimentaires naturels</p>
+  </header>
+
+  <section class="section">
+    <h2>À propos de nous</h2>
+    <p>
+      Maison Sanzo'o est une entreprise engagée dans la promotion de la beauté naturelle et de l'alimentation saine. 
+      Nous sélectionnons des produits de qualité, issus d'ingrédients naturels pour répondre aux besoins de nos clients.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Nos Produits</h2><input type="text" id="searchInput" placeholder="Rechercher un produit..." 
+       style="width: 100%; max-width: 400px; margin: 20px auto; display: block; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;" />
+
+
+
+    <div class="products">
+      <div class="product-card">
+        <h3>GAMME de Mayanga</h3>
+        <p>Hydrate en profondeur la peau et redonne de la briyance au cheveux.</p>
+      </div><div class="product-card">
+        <h3>GAMME de Miel </h3>
+        <p>Formulé à base d’ingrédients 100% naturels.</p>
+      </div>
+
+      
+      <div class="product-card">
+
+
+        <h3>GAMME de KARITÉ </h3>
+        <p>Formulé à base d’ingrédients 100% naturels.</p>
+      </div>
+      <div class="product-card">
+        <h3>GAMME de THÉ BIO</h3>
+        <p>Naturel, sucré et bon pour la santé.</p>
+      </div>
+      <div class="product-card">
+        <h3>GAMME HUILE VEGETAL</h3>
+        <p>Formulé à base d’ingrédients 100% naturels.</p>
+      </div>
+      <div class="product-card">
+        <h3>GAMME HYDROLATS </h3>
+        <p>Formulé à base d’ingrédients 100% naturels.</p>
+      </div>
+      <div class="product-card">
+        <h3>Gamme de CONFITURES</h3>
+        <p>Favorise l'élimination des toxines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    '
+    <div class="contact-info">
+      <p><strong>Email :</strong> maisonsanzoo@gmail.com</p>
+      <p><strong>Adresse :</strong> 873, Rue UTA Bonapriso, Douala - Cameroun</p>
+      <p><strong>Téléphone :</strong> +237 696 343 626 / +237 677 251 159 </p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Maison Sanzo'o. Tous droits réservés.
+  </footer>
+<!-- Bouton WhatsApp flottant visible sur toutes les pages -->
+<a href="https://wa.me/237696343626" class="whatsapp-float" target="_blank" aria-label="Chat WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
+</a><script>
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.product-card');
+
+    cards.forEach(card => {
+      const title = card.querySelector('h3').textContent.toLowerCase();
+      const description = card.querySelector('p').textContent.toLowerCase();
+
+      if (title.includes(query) || description.includes(query)) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+
+
+
+
+</body>
+</html>
