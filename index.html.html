@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+ <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maison Sanzo'o</title>
   <style>
     /* Bouton flottant WhatsApp */
-.whatsapp-float {
+ .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -20,15 +20,15 @@
   justify-content: center;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
   text-decoration: none;
-}
-.whatsapp-float img {
+ }
+ .whatsapp-float img {
   width: 28px;
   height: 28px;
   filter: invert(100%);
-}
-.whatsapp-float:hover {
+ }
+ .whatsapp-float:hover {
   background-color: #1ebe5d;
-}
+ }
 
     body {
       margin: 0;
@@ -90,20 +90,44 @@
       padding: 20px;
       margin-top: 40px;
     }
+         .container  {
+      display: flex;
+      align-items: left;
+      padding: 10px 20px;
+      height: 90px;
+    }
+    .logo {
+      height: 90px; /* hauteur du logo */
+      width: 80px;
+    }
+    a {
+      color: black;
+    }
+    
   </style>
-</head>
-<body>
+ </head>
+ <body>
 
   <header>
+    <Div class="container" >  
+  
+
+      <img src="St.png" alt="Logo" class="Logo" />
+    </Div>
+   
     <h1>Maison Sanzo'o</h1>
     <p>Cosmétiques & Produits alimentaires naturels</p>
+
+   
   </header>
 
   <section class="section">
     <h2>À propos de nous</h2>
     <p>
-      Maison Sanzo'o est une entreprise engagée dans la promotion de la beauté naturelle et de l'alimentation saine. 
-      Nous sélectionnons des produits de qualité, issus d'ingrédients naturels pour répondre aux besoins de nos clients.
+            « Sanzo’o » est un terme camerounais en dialecte Mbo qui signifie « le père des éléphants ». Cette
+ appellation est née de la vision d’un couple d’entrepreneurs, M. DONNA Frédéric et Mme Jeanne Marlyse DONNA. L’optique était de promouvoir et valoriser les terroirs camerounais et africain. Le projet est né du constat que les femmes (beaucoup plus) sont à cette époque très tournées vers les produits chimiques, très nocifs pour la santé. Il fallait donc inciter le public à revenir vers « mère nature ». En 2015, l’entreprise « Maison Sanzo’o » est alors créée. Graduellement, une kyrielle de produits 100% naturels et faits à la main a vu le jour.
+
+
     </p>
   </section>
 
@@ -115,10 +139,10 @@
 
     <div class="products">
       <div class="product-card">
-        <h3>GAMME de Mayanga</h3>
+        <h3><a href="mayanga.html">GAMME de Mayanga</a></h3>
         <p>Hydrate en profondeur la peau et redonne de la briyance au cheveux.</p>
       </div><div class="product-card">
-        <h3>GAMME de Miel </h3>
+        <h3><a href="miel.html">GAMME de Miel</a> </h3>
         <p>Formulé à base d’ingrédients 100% naturels.</p>
       </div>
 
@@ -126,23 +150,27 @@
       <div class="product-card">
 
 
-        <h3>GAMME de KARITÉ </h3>
+        <h3><a href="karité.html">GAMME de KARITÉ</a> </h3>
         <p>Formulé à base d’ingrédients 100% naturels.</p>
       </div>
       <div class="product-card">
-        <h3>GAMME de THÉ BIO</h3>
+        <h3><a href="thebio.html">GAMME de THÉ BIO</a></h3>
         <p>Naturel, sucré et bon pour la santé.</p>
       </div>
       <div class="product-card">
-        <h3>GAMME HUILE VEGETAL</h3>
+        <h3><a href="huilevegetale.html">GAMME HUILE VEGETAL</a></h3>
         <p>Formulé à base d’ingrédients 100% naturels.</p>
       </div>
       <div class="product-card">
-        <h3>GAMME HYDROLATS </h3>
+        <h3><a href="crème.html">GAMME des Crèmes</a></h3>
+        <p>Formulé à base d’ingrédients 100% naturels</p>
+      </div>
+      <div class="product-card">
+        <h3><a href="hydrolat.html">GAMME HYDROLATS</a> </h3>
         <p>Formulé à base d’ingrédients 100% naturels.</p>
       </div>
       <div class="product-card">
-        <h3>Gamme de CONFITURES</h3>
+        <h3><a href="confiture.html">GAMME de CONFITURES</a></h3>
         <p>Favorise l'élimination des toxines.</p>
       </div>
     </div>
@@ -160,10 +188,10 @@
   <footer>
     &copy; 2025 Maison Sanzo'o. Tous droits réservés.
   </footer>
-<!-- Bouton WhatsApp flottant visible sur toutes les pages -->
-<a href="https://wa.me/237696343626" class="whatsapp-float" target="_blank" aria-label="Chat WhatsApp">
+  <!-- Bouton WhatsApp flottant visible sur toutes les pages -->
+   <a href="https://wa.me/237696343626" class="whatsapp-float" target="_blank" aria-label="Chat WhatsApp">
   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp" />
-</a><script>
+  </a><script>
   document.getElementById('searchInput').addEventListener('input', function () {
     const query = this.value.toLowerCase();
     const cards = document.querySelectorAll('.product-card');
